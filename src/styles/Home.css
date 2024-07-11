@@ -1,6 +1,5 @@
 .home {
   min-height: 100vh;
-  /* background-color: #ffffff; */
   color: #232b2b;
   background: radial-gradient(
     circle,
@@ -24,7 +23,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-
   z-index: -1;
 }
 
@@ -86,17 +84,17 @@
   color: #3d0c02;
   font-size: 1rem;
 }
+
 .search-input:active {
   border: none;
 }
+
 .search-input::placeholder {
   color: grey;
 }
 
 .search-button {
-  /* background: #00aeff; */
   background: linear-gradient(45deg, #00aeff, #a68eff);
-
   border: none;
   padding: 1rem 1.5rem;
   padding-top: 0.5em;
@@ -107,7 +105,6 @@
 }
 
 .search-button:hover {
-  /* background: #0095ff;  */
   background: linear-gradient(45deg, #a68eff, #00aeff);
 }
 
@@ -122,12 +119,14 @@
   right: 17%;
   opacity: 0.6;
 }
+
 .leaves {
   top: 20%;
   left: 5%;
   opacity: 0.3;
   width: 700px;
 }
+
 .home-content {
   padding: 0rem;
 }
@@ -137,45 +136,6 @@
   justify-content: center;
   margin-top: 2rem;
 }
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .newsalert {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .search-container {
-    display: flex;
-    flex-direction: row;
-    height: 3.125rem;
-    margin: 5px;
-  }
-  .search-button {
-    padding-top: 1em;
-  }
-}
-/* In src/styles/Home.css */
-/* 
-.hero-content h1 {
-  font-size: 3rem;
-  font-family: cursive;
-  font-weight: bolder;
-  text-shadow: #3d0c02;
-  margin-bottom: 1rem;
-  background: linear-gradient(45deg, #00aeff, #a68eff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative; 
-} */
 
 .hero-content h1::after {
   content: "|";
@@ -194,8 +154,6 @@
     opacity: 0;
   }
 }
-
-/* Add this to your existing Home.css file */
 
 .hero-content h1 {
   font-size: clamp(2rem, 5vw, 3rem);
@@ -220,6 +178,69 @@
   display: flex;
   flex-direction: row;
   margin-top: 20px;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.map-container {
+  width: 48%;
+}
+
+.college-list-container {
+  width: 50%;
+}
+
+.college-list-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 200;
+  color: #2c3e50;
+  text-align: center;
+  /* margin-bottom: 1rem; */
+  padding: 0%;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .newsalert {
+    flex-direction: column;
+  }
+
+  .mapandlistsection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-container,
+  .college-list-container {
+    width: 100%;
+  }
+
+  .map-container {
+    margin-bottom: 20px;
+  }
+  .college-list-title {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    height: 3.125rem;
+    margin: 5px;
+  }
+
+  .search-button {
+    padding-top: 1em;
+  }
 }
