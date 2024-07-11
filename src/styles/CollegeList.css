@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+.college-list-container {
+  font-family: "Poppins", sans-serif;
+  max-width: 1200px;
+  margin: 10px auto;
+  /* padding: 2rem; */
+  background-color: #f0f4f8;
+}
+
+.biglink {
+  text-decoration: none;
+}
+.college-list-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 200;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.college-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.college-card {
+  width: 338px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.college-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.college-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+}
+/* 
+.college-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.7)
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+} */
+
+.college-ranking {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.college-info {
+  padding: 1.5rem;
+}
+
+.college-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.college-location,
+.college-established {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.college-location i,
+.college-established i {
+  margin-right: 0.5rem;
+  color: #3498db;
+}
+
+/* 
+ */
+
+.college-course-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.course-type {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.course-rating-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.course-rating,
+.course-reviews {
+  font-size: 14px;
+  color: #666;
+}
+
+.college-fees {
+  margin-bottom: 15px;
+}
+
+.fees-amount {
+  font-weight: bold;
+  color: #4caf50;
+  font-size: 18px;
+}
+
+.fees-type {
+  font-size: 14px;
+  color: #666;
+  margin-left: 5px;
+}
+.btndiv {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.btn34 {
+  display: flex;
+  background: #5e5df0;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 7px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+
+  border: 0;
+  margin-top: 10px;
+
+  align-items: center;
+}
+.dwicon {
+  font-size: large;
+  padding-right: 3px;
+  padding-left: 1px;
+}
+
+.clgvisit {
+  text-decoration: none;
+}
+
+.btdiv {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .college-grid {
+    gap: 1rem;
+  }
+
+  /* .college-card {
+    width: calc(50% - 1rem);
+  } */
+}
+
+@media (max-width: 480px) {
+  .college-card {
+    width: 100%;
+  }
+}

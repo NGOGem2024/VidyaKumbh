@@ -1,0 +1,198 @@
+.career-selector {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.career-options-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.career-options {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.career-options.sliding-left {
+  transform: translateX(-100%);
+}
+
+.career-options.sliding-right {
+  transform: translateX(100%);
+}
+
+.career-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.career-card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.career-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.career-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.career-card:hover .career-icon {
+  transform: scale(1.1);
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.college-count {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.career-courses {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.career-courses.show {
+  max-height: 200px; /* Adjust this value based on your content */
+}
+
+.course {
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.course:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-button {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #333;
+  z-index: 1;
+}
+
+.nav-button.prev {
+  left: 0px;
+}
+
+.nav-button.next {
+  right: 0px;
+}
+
+.nav-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-button.hidden {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .career-options {
+    gap: 15px;
+  }
+
+  .career-card {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .career-options-container {
+    flex-direction: column;
+  }
+
+  .career-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .career-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .nav-button {
+    position: static;
+    transform: none;
+    margin: 10px auto;
+  }
+
+  .nav-button.prev {
+    order: 1;
+  }
+
+  .nav-button.next {
+    order: 3;
+  }
+
+  .career-options {
+    order: 2;
+  }
+}

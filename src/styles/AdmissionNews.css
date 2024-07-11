@@ -1,0 +1,44 @@
+.admission-news {
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  padding: 2rem;
+  padding-top: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem;
+}
+
+.admission-news h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.news-container {
+  height: 200px; /* Adjust this value to show desired number of items */
+  overflow: hidden;
+  position: relative;
+}
+
+.news-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.news-title {
+  color: #34495e;
+  font-weight: 500;
+}
+
+.news-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}

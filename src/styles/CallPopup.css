@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.call-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.call-popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.call-popup-content h3 {
+  margin-bottom: 10px;
+}
+
+.call-popup-content img {
+  /* margin-bottom: 10px; */
+  max-width: 250px;
+}
+
+.call-popup-content p {
+  max-width: 500px;
+  word-wrap: break-word;
+}
+
+.call-popup-content a,
+.call-popup-content button {
+  display: block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.call-popup-content button:last-child {
+  background-color: #dc3545;
+}
+
+.join-url {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* margin: 0; */
+}
+
+.copy-wrapper {
+  position: relative;
+  margin-left: 5px;
+}
+
+.copy-icon {
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.copy-icon.copied {
+  color: green;
+}
+
+.call-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.call-button {
+  width: 150px;
+  background-color: green;
+}
+
+.reject-button {
+  width: 150px;
+}
+
+.icncall {
+  margin-top: 2px;
+}

@@ -1,0 +1,225 @@
+.home {
+  min-height: 100vh;
+  /* background-color: #ffffff; */
+  color: #232b2b;
+  background: radial-gradient(
+    circle,
+    rgba(0, 174, 255, 0.1) 0%,
+    rgba(0, 174, 255, 0) 70%
+  );
+}
+
+.hero-section {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+.home:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 174, 255, 0.1) 0%,
+    rgba(0, 174, 255, 0) 70%
+  );
+  animation: pulse 15s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-25%, -25%) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  color: #494f55;
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  height: 6.25rem;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: #fefefe;
+  color: #3d0c02;
+  font-size: 1rem;
+}
+.search-input:active {
+  border: none;
+}
+.search-input::placeholder {
+  color: grey;
+}
+
+.search-button {
+  /* background: #00aeff; */
+  background: linear-gradient(45deg, #00aeff, #a68eff);
+
+  border: none;
+  padding: 1rem 1.5rem;
+  padding-top: 0.5em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  transition-duration: 600ms;
+  color: #fefefe;
+}
+
+.search-button:hover {
+  /* background: #0095ff;  */
+  background: linear-gradient(45deg, #a68eff, #00aeff);
+}
+
+.floating-illustration {
+  position: absolute;
+  width: 300px;
+  height: auto;
+}
+
+.graduation-cap {
+  top: -10%;
+  right: 17%;
+  opacity: 0.6;
+}
+.leaves {
+  top: 20%;
+  left: 5%;
+  opacity: 0.3;
+  width: 700px;
+}
+.home-content {
+  padding: 0rem;
+}
+
+.newsalert {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .newsalert {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    height: 3.125rem;
+    margin: 5px;
+  }
+  .search-button {
+    padding-top: 1em;
+  }
+}
+/* In src/styles/Home.css */
+/* 
+.hero-content h1 {
+  font-size: 3rem;
+  font-family: cursive;
+  font-weight: bolder;
+  text-shadow: #3d0c02;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00aeff, #a68eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative; 
+} */
+
+.hero-content h1::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  animation: blink 0.7s infinite;
+  color: black;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Add this to your existing Home.css file */
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-family: cursive;
+  font-weight: bolder;
+  text-shadow: #3d0c02;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00aeff, #a68eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  color: #494f55;
+}
+
+.mapandlistsection {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}

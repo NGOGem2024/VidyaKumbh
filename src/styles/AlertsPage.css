@@ -1,0 +1,17 @@
+.alerts-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.alerts-page h1 {
+  color: #1a237e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.alerts-page p {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}

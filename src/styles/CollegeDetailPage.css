@@ -1,0 +1,224 @@
+/* General styles */
+.college-detail-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #f0f2f5;
+}
+
+/* Header styles */
+.college-header {
+  position: relative;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.college-banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.college-title-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 20px;
+}
+
+.collegename {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.college-basic-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 14px;
+}
+
+/* Content sections */
+.college-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.college-about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.aboutbottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.dwbtn {
+  background-color: rgb(219, 173, 89);
+}
+
+.vtbtn {
+  background-color: #3498db;
+}
+
+.callbtn {
+  background: linear-gradient(
+    45deg,
+    #fff,
+    #a68eff,
+    #00aeff,
+    #a68eff,
+    #00aeff,
+    #fff
+  );
+  background-size: 300% 300%;
+  font-size: 14px;
+  animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.action-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+}
+
+.icncall {
+  font-size: 24px;
+}
+
+/* Courses table */
+.course-table-container {
+  overflow-x: auto;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-table th,
+.course-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.course-table thead {
+  background-color: #3498db;
+  color: white;
+}
+
+.course-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Facilities list */
+.facilities-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.facilities-list li {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .college-banner {
+    height: 400px;
+  }
+
+  .collegename {
+    font-size: 40px;
+  }
+
+  .college-basic-info {
+    font-size: 16px;
+  }
+
+  .college-content {
+    padding: 40px;
+  }
+
+  .college-about-section {
+    flex-direction: row;
+  }
+
+  .about-section {
+    flex: 1;
+  }
+
+  .action-buttons {
+    width: 250px;
+  }
+
+  .course-table th,
+  .course-table td {
+    padding: 15px;
+  }
+}

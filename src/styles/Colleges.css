@@ -1,0 +1,17 @@
+.colleges {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.colleges h1 {
+  color: #1a237e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.clgp {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
