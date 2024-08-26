@@ -93,3 +93,15 @@
 .icncall {
   margin-top: 2px;
 }
+
+@media (max-width: 768px) {
+  .call-popup-content {
+    width: 80%;
+  }
+  .call-button {
+    width: 100px;
+  }
+  .reject-button {
+    width: 100px;
+  }
+}

@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <img src={logo} alt="CoolCampus" className="logoimg" />
+          <img src={logo} alt="VidyaKumbh" className="logoimg" />
         </Link>
         <div
           className={`menu-icon ${menuOpen ? "open" : ""}`}
@@ -46,11 +46,11 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/colleges" className="nav-link">
                 Colleges
               </Link>
-            </li>
+            </li> */}
             {/* <li className="nav-item">
               <Link to="/news" className="nav-link">
                 News

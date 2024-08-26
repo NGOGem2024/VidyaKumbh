@@ -1,46 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { MdDownload, MdCall } from "react-icons/md";
+import { MdDownload } from "react-icons/md";
 import { PiGlobeHemisphereWestDuotone } from "react-icons/pi";
 import { BsQrCodeScan } from "react-icons/bs";
 import "../styles/CollegeDetailPage.css";
 import CallPopup from "../components/CallPopup";
 import Footer from "../components/Footer";
-
-interface Course {
-  name: string;
-  duration: string;
-  description: string;
-}
-
-interface College {
-  id: number;
-  name: string;
-  ranking: number;
-  imageUrl: string;
-  location: string;
-  established: number;
-  visit: string;
-  brochure: string;
-  phone: string;
-  about: string;
-  principal: string;
-  courses: Course[];
-  facilities: string[];
-}
+import { College } from "../types";
 
 const CollegeDetailPage: React.FC = () => {
   const location = useLocation();
   const college: College = location.state?.college;
 
+  const [callType, setCallType] = useState<"admission" | "placement">(
+    "admission"
+  );
   const [selectedCollege, setSelectedCollege] = useState<College | null>(null);
+
   useEffect(() => {
-    // Scroll to the top when the component mounts
     window.scrollTo(0, 0);
   }, []);
+
   if (!college) {
     return <div>No college data available</div>;
   }
+
+  const handleCallClick = (type: "admission" | "placement") => {
+    setSelectedCollege(college);
+    setCallType(type);
+  };
 
   return (
     <div className="college-detail-container">
@@ -78,9 +66,17 @@ const CollegeDetailPage: React.FC = () => {
               <strong>Location:</strong> {college.location}
             </p>
             <div className="aboutbottom">
-              <a href={college.brochure} className="action-button dwbtn">
-                <MdDownload /> Download Brochure
-              </a>
+              {college.brochure ? (
+                <a href={college.brochure} className="action-button dwbtn">
+                  <MdDownload />
+                  Download Brochure
+                </a>
+              ) : (
+                <button className="action-button dwbtn" disabled>
+                  <MdDownload className="dwicon" />
+                  Brochure Unavailable
+                </button>
+              )}
               <a href={college.visit} className="action-button vtbtn">
                 <PiGlobeHemisphereWestDuotone /> Visit Website
               </a>
@@ -88,19 +84,20 @@ const CollegeDetailPage: React.FC = () => {
           </section>
           <div className="action-buttons">
             <button
-              onClick={() => setSelectedCollege(college)}
+              onClick={() => handleCallClick("admission")}
               className="action-button callbtn"
             >
               <BsQrCodeScan className="icncall" /> Talk for Admission
             </button>
             <button
-              onClick={() => setSelectedCollege(college)}
+              onClick={() => handleCallClick("placement")}
               className="action-button callbtn"
             >
               <BsQrCodeScan className="icncall" /> Talk for Placement
             </button>
           </div>
         </div>
+        {/* Courses and Facilities sections are commented out */}
         {/* <section className="courses-section">
           <h2>List of Courses Offered</h2>
           <div className="course-table-container">
@@ -138,6 +135,7 @@ const CollegeDetailPage: React.FC = () => {
         <CallPopup
           college={selectedCollege}
           onClose={() => setSelectedCollege(null)}
+          callType={callType}
         />
       )}
     </div>

@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 import "../styles/Colleges.css";
-import CollegeList from "../components/CollegeList";
+// import CollegeList from "../components/CollegeList";
 
 const Colleges = () => {
   return (
@@ -9,7 +9,7 @@ const Colleges = () => {
       <p className="clgp">
         Explore detailed information about the best colleges in India.
       </p>
-      <CollegeList />
+      {/* <CollegeList  /> */}
     </div>
   );
 };

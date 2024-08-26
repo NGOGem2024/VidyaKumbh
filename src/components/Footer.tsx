@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "../styles/Footer.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/vidyalogo2.png";
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div className="footer-section contact">
           <h3>Connect With Us</h3>
-          <p>Email: info@VidyaKumbh.com</p>
+          <p>Email: info@VidyaKumbh.in</p>
           <p>Phone: (555) 123-4567</p>
           <div className="social-icons">
             <a href="#" className="social-icon">
